@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="ru.shrott.shrottmaster.view.vo.BadgeVO" />
+
+        <variable
+            name="vmBadge"
+            type="BadgeVO" />
+
+    </data>
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="@{vmBadge.listener}"
+    android:background="?android:attr/selectableItemBackground">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cvType"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@{vmBadge.status==1 ? @color/partially_filled_badge : @color/new_badge}"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRgAndModel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvName"
+    />
+
+    <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvType"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Худяев Евгений Васильевич"
+            android:text="@{vmBadge.name}"
+            style="@style/Theme.AppCompat"
+            android:textSize="18sp"/>
+
+    <TextView
+            android:id="@+id/tvRgAndModel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvType"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:text="О124ВЕ 11 Хендай ИХ с прицепом"
+            android:text='@{vmBadge.regNum+" "+vmBadge.modelCar}'
+            android:textSize="18sp"/>
+
+    <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/cvType"
+            app:layout_constraintEnd_toEndOf="@+id/cvType"
+            app:layout_constraintStart_toStartOf="@+id/cvType"
+            app:layout_constraintTop_toTopOf="@+id/cvType"
+            android:text='@{vmBadge.status==1 ? "ЧЗ" : "Н"}'
+            tools:text="Н"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvRgAndModel"
+            app:layout_constraintVertical_bias="0.0"/>
+
+</android.support.constraint.ConstraintLayout>
+</layout>

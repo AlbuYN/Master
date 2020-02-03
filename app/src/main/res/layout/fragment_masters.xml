@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+                name="viewModel"
+                type="ru.shrott.shrottmaster.view_model.MastersViewModel"
+        />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.fragments.MastersFragment">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                android:background="@drawable/primary_gradient_color"
+                />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:refreshing="@{viewModel.isLoading}"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMasters"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+</layout>

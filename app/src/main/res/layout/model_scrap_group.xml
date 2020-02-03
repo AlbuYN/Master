@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="ru.shrott.shrottmaster.view.vo.ScrapGroupVO" />
+
+        <variable
+            name="vmScrapGroup"
+            type="ScrapGroupVO" />
+
+        <import type="android.databinding.adapters.Converters"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@{vmScrapGroup.backgroundGroup.selected ? @drawable/selected_group_background : vmScrapGroup.backgroundGroup.full ? @drawable/full_group_background : @drawable/element_frame}"
+        >
+
+        <TextView
+                android:id="@+id/tvName"
+                style="@style/Theme.AppCompat"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="ЛС14"
+                textSpannable="@{vmScrapGroup.label}"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+
+                android:onClick="@{vmScrapGroup.listener}"
+        />
+    </android.support.constraint.ConstraintLayout>
+</layout>

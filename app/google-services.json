@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1001754589205",
+    "firebase_url": "https://shrottmaster-a6bd3.firebaseio.com",
+    "project_id": "shrottmaster-a6bd3",
+    "storage_bucket": "shrottmaster-a6bd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001754589205:android:ab529016ada1797522361c",
+        "android_client_info": {
+          "package_name": "ru.shrott.shrottmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001754589205-qtf83h110javb9eiav6bfh0n5jmh11ql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.shrott.shrottmaster",
+            "certificate_hash": "b4ad51e1e916d0dce27e27d383684c177bd95f7b"
+          }
+        },
+        {
+          "client_id": "1001754589205-i0ebiq84ar8kt16ku6m47vr2otvigsdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBud7FV4Xb7bLtHhRtzH0PzRHD6ayqvDKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001754589205-i0ebiq84ar8kt16ku6m47vr2otvigsdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

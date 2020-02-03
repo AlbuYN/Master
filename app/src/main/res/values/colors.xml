@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#850400</color>
+    <color name="colorPrimaryDark">#db281c</color>
+    <color name="colorAccent">#db281c</color>
+
+
+    <color name="gradient_start_primary">#850400</color>
+    <color name="gradient_end_primary">#db281c</color>
+
+    <color name="new_badge">#56CCF2</color>
+    <color name="partially_filled_badge">#219653</color>
+    <color name="selected_group">#A5D6A7</color>
+    <color name="background_container">#F9F9F9</color>
+    <color name="border_color">#BDBDBD</color>
+    <color name="color_background_element">#FFFFFF</color>
+    <color name="background_text">#F2F2F2</color>
+</resources>

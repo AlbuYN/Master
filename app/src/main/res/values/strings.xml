@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Мастер</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shift_master">Выбор мастера смены</string>
+    <string name="master">Мастер</string>
+    <string name="title_message_comment_need_permission_camera">Необходим доступ к вашей камере</string>
+    <string name="comment_need_permission_camera">Мы запрашиваем доступ к вашей камере чтобы вы могли отсканировать
+        штрих-код вашей карты и добавить фото в пропуск
+    </string>
+    <string name="nead_permission_camera">Необходимо разрешение на использование камеры!</string>
+    <string name="empty_fined">Ничего не найдено</string>
+    <string name="car">Машина:</string>
+    <string name="total_percent">Общий процент:</string>
+    <string name="arm">АРМ</string>
+    <string name="error_access_storage_card">Необходим доступ к карте памяти устройства!</string>
+    <string name="percentage_is_not_higher_than_the_limit">Вносимый процент не должен превышать</string>
+    <string name="weight_required">Необходимо 100% веса!</string>
+    <string name="ip_address_saved">IP - адрес сохранен</string>
+    <string name="settings">Настройки</string>
+    <string name="network_unavailable">Не удалось подключится к серверу, проверьте доступность сети и правильность
+        IP-адреса
+    </string>
+    <string name="crash_toast_text">произошла ошибка</string>
+    <string name="update_nomenclature">Обновить номенклатуру</string>
+    <string name="updated_nomenclature">Номенклатура обновлена!</string>
+
+</resources>

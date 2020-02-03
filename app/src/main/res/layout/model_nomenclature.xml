@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="ru.shrott.shrottmaster.view.vo.NomenclatureVO" />
+
+        <variable
+                name="vmNomenclature"
+                type="NomenclatureVO" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="128dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:background="@{vmNomenclature.full ? @drawable/full_group_background : @drawable/element_frame}"
+    >
+
+        <TextView
+                android:id="@+id/tvName"
+                style="@style/Theme.AppCompat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="ЛС14"
+                textSpannable="@{ vmNomenclature.label }"
+
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="@{vmNomenclature.listener}"
+
+        />
+    </android.support.constraint.ConstraintLayout>
+</layout>

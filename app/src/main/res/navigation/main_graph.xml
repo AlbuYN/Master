@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_graph"
+            app:startDestination="@id/mastersFragment">
+
+    <fragment android:id="@+id/mastersFragment" android:name="ru.shrott.shrottmaster.view.fragments.MastersFragment"
+              android:label="fragment_masters" tools:layout="@layout/fragment_masters">
+        <action android:id="@+id/action_mastersFragment_to_badgeListFragment" app:destination="@id/badgeListFragment"
+                app:popUpTo="@+id/mastersFragment" app:popUpToInclusive="false" app:launchSingleTop="false"/>
+        <action
+            android:id="@+id/action_mastersFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@+id/mastersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/badgeListFragment"
+        android:name="ru.shrott.shrottmaster.view.fragments.BadgeListFragment"
+        android:label="fragment_badge_list"
+        tools:layout="@layout/fragment_badge_list" />
+    <fragment android:id="@+id/passFragment" android:name="ru.shrott.shrottmaster.view.fragments.PassFragment"
+              android:label="PassFragment">
+        <action android:id="@+id/action_passFragment_to_selectScrapCalculateFragment"
+                app:destination="@id/selectScrapCalculateFragment" app:popUpTo="@+id/passFragment"/>
+        <action android:id="@+id/action_passFragment_to_totalPercentFragment"
+                app:destination="@id/totalPercentFragment" app:popUpTo="@+id/passFragment"/>
+    </fragment>
+    <fragment android:id="@+id/selectScrapCalculateFragment"
+              android:name="ru.shrott.shrottmaster.view.fragments.SelectScrapCalculateFragment"
+              android:label="SelectScrapCalculateFragment"/>
+    <fragment android:id="@+id/totalPercentFragment"
+              android:name="ru.shrott.shrottmaster.view.fragments.TotalPercentFragment"
+              android:label="TotalPercentFragment"/>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ru.shrott.shrottmaster.view.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
